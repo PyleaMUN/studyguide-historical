@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Historical Crisis Committee Study Guide — Collapsible</title>
+  <style>
+    :root {
+      --bg: #E8EAE6;
+      --paper: #e0f7fa;
+      --ink: #333;
+      --brand: #005b63;
+      --accent: #00b4a0;
+    }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .letterhead { display:flex; justify-content:space-between; align-items:center; background-color:#D6DBD2; border-bottom:2px solid #444; padding:10px 20px; min-height:100px; flex-wrap:wrap; }
+    .address, .contact { width:30%; font-size:0.9rem; }
+    .contact { display:flex; flex-direction:column; align-items:flex-end; }
+    .logo-container { width:120px; text-align:center; }
+    .logo { width:120px; height:auto; display:block; }
+    .letterhead a { color:#0066cc; text-decoration:none; }
+
+    main { padding: 2rem 1rem 4rem; max-width: 1100px; margin: 0 auto; }
+    h1 { text-align:center; color:var(--brand); margin-top:1rem; }
+    .container { background: var(--paper); padding: 1.25rem; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+
+    /* Controls */
+    .controls { display:flex; flex-wrap:wrap; gap:.5rem; justify-content:center; margin: 1rem 0 1.25rem; }
+    button { border:none; border-radius:32px; padding:.65rem 1rem; font-size:0.95rem; cursor:pointer; background:var(--accent); color:#fff; }
+    button.secondary { background:#1e88e5; }
+    button.ghost { background:transparent; border:2px solid var(--accent); color:var(--accent); }
+
+    /* Collapsibles */
+    .toc { background:#fff; border-radius:12px; padding: .75rem 1rem; margin-bottom:1rem; border:1px solid #cfe8ea; }
+    .toc h2 { margin:.25rem 0 .5rem; font-size:1.1rem; color:#00796b; }
+    .toc a { display:inline-block; margin:.15rem .5rem .15rem 0; color:#0066cc; text-decoration:none; }
+
+    details { background:#fff; border:1px solid #cfe8ea; border-radius:12px; margin:.75rem 0; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+    summary { cursor:pointer; padding: .9rem 1rem; font-weight:600; color:#00796b; list-style:none; }
+    summary::-webkit-details-marker { display:none; }
+    .chev { transition: transform .25s ease; display:inline-block; margin-right:.25rem; }
+    details[open] .chev { transform: rotate(90deg); }
+    .content { padding: 0 1rem 1rem; }
+    .content pre { white-space: pre-wrap; word-wrap: break-word; margin:0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:.98rem; line-height:1.5; }
+
+    /* Nice anchors */
+    .anchor { scroll-margin-top: 110px; }
+
+    /* Print */
+    @media print {
+      .controls, .toc { display:none !important; }
+      details { border:none; box-shadow:none; }
+      summary { padding:0; color:inherit; }
+      .content { padding:0; }
+    }
+    /* Overrides per user request */
+    body, html, .content pre { font-family: Georgia, 'Times New Roman', Times, serif !important; }
+    table.data { width:100%; border-collapse:collapse; background:#fff; border:1px solid #cfe8ea; border-radius:12px; overflow:hidden; }
+    table.data th, table.data td { border:1px solid #cfe8ea; padding:.55rem .7rem; vertical-align:top; }
+    table.data th { background:#f0fbfd; color:#00796b; text-align:left; }
+    table.data tbody tr:nth-child(even) { background:#f8ffff; }
+    .sources ul { margin:.25rem 0 1rem 1.25rem; }
+    .sources a { color:#0066cc; text-decoration:none; }
+    .sources a:hover { text-decoration:underline; }
+    /* Bold emphasis */
+    .content strong { font-weight:700; }
+  </style>
+</head>
+<body>
+  <div class="letterhead">
+    <div class="address"><strong>4 Isminis Str.</strong><br>Pylaia, Thessaloniki - 55535</div>
+    <div class="logo-container">
+      <img src="PyleaMUN_finalstamp.png" alt="PyleaMUN Logo" class="logo"/>
+    </div>
+    <div class="contact">
+      <div>📞 +30 2310329199</div>
+      <div>📧 <a href="mailto:pyleamun@gmail.com">pyleamun@gmail.com</a></div>
+      <div>🌐 <a href="#">pyleamun.github.io/pyleamun2026</a></div>
+    </div>
+  </div>
+
+  <main>
+    <h1>Historical Crisis Committee Study Guide</h1>
+    <div class="container">
+      <div class="controls">
+        <button id="expandAll">Expand all</button>
+        <button id="collapseAll" class="secondary">Collapse all</button>
+        <button id="printPage" class="ghost">Print</button>
+      </div>
+
+      <nav class="toc">
+        <h2>Quick Navigation</h2>
+        <a href="#sec1">1. Executive Summary</a>
+        <a href="#sec2">2. Historical Foundation & Power</a>
+        <a href="#sec3">3. League Charter</a>
+        <a href="#sec4">4. Gallery of Delegates</a>
+        <a href="#sec5">5. Conclusions & Recommendations</a>
+        <a href="#appA">Appendix A</a>
+        <a href="#appB">Appendix B</a>
+        <a href="#sources">Primary Sources & Scholarship</a>
+      </nav>
+
+      <details id="sec1" class="anchor">
+        <summary><span class="chev">▸</span>1. Executive Summary: The Geopolitical Imperative</summary>
+        <div class="content">
+<pre>
+This strategic analysis provides advanced delegates with the critical historical, political, and strategic context essential for effective engagement in the simulation of the Congress of <strong>Corinth</strong>, convened in 337 BCE. The environment is defined by the profound political imbalance created by Macedonian dominance, necessitating a nuanced approach to diplomacy and negotiation.
+
+<strong>The Mandate of <strong>Corinth</strong></strong>
+
+The Congress is formally convened by Philip II of Macedon with dual, stated objectives. The first objective is the establishment of a <strong>Common Peace</strong> throughout Hellas, aimed at halting the endemic inter-Polis conflicts that have plagued the region, such as the recent devastating Sacred War. The second, more ambitious goal is the forging of a unified Panhellenic force for a collective war of vengeance against the Persian Empire. The central task of the delegates is to debate, amend, and ultimately vote on the articles that constitute the League's founding Charter.
+
+<strong>The Reality of <strong>Hegemony</strong></strong>
+
+Delegates must approach the proceedings recognizing that the stated goal of unity functions primarily to mask the underlying reality of Macedonian control. The Hellenic League, despite its name, is fundamentally designed as an instrument of Philip's <strong>Hegemony</strong>, which is defined as the leadership or dominance of one state over others. The assembled Greek states are thus negotiating the terms of their collective <strong>Suzerainty</strong>—a relationship wherein a powerful state controls their foreign affairs while theoretically allowing for domestic <strong>Autonomy</strong>. The primary challenge for every delegate is to preserve the maximum possible degree of local self-governance while accepting the undeniable necessity of Philip’s military leadership and protection for the impending Persian campaign. The success of the League will be measured not in the equality of its members, but in the political ingenuity of the delegates to limit the reach of Macedonian authority within the framework of collective security.
+</pre>
+        </div>
+      </details>
+
+      <details id="sec2" class="anchor">
+        <summary><span class="chev">▸</span>2. The Historical Foundation and Structure of Power</summary>
+        <div class="content">
+<pre>
+The political landscape of the Congress is entirely defined by the recent shift in the balance of power, concentrating authority in the hands of the Macedonian delegation.
+
+<strong>A. The Shadow of Chaeronea and the Rise of Philip II</strong>
+
+The year 337 BCE represents a nadir for classical Greek poleis. The military reality is irrevocably dictated by the Macedonian victory at the Battle of Chaeronea (338 BCE), which effectively broke the power of the southern Greek city-states, severely weakening <strong>Athens</strong> and leading to the outright submission of Thebes.
+
+Following this victory, the Macedonian imperative at <strong>Corinth</strong> is clear and two-fold. First, Philip II requires the League to solidify his political and military control over Greece, thereby securing his supply lines and domestic stability before embarking on the foreign campaign. Second, and equally vital, the League serves to legitimize his invasion of Persia. By uniting the Greeks under a Panhellenic banner, Philip frames the invasion as a communal act of vengeance against the ancient enemy, rather than a purely Macedonian conquest aimed at territorial expansion. This requires the delegates to endorse military contributions and the command structure necessary for the Vanguard to move into Asia.
+
+<strong>B. The Pillars of Macedonian Authority in the Congress</strong>
+
+While the proceedings may follow a diplomatic format, the ultimate levers of power reside with the three key Macedonian figures on the dais. Delegates must understand that these individuals wield political authority, defining the scope and limitations of the debate.
+
+<strong>Philip II (The Monarch)</strong>
+
+Philip II is the ultimate authority in the Congress, holding the position of Monarch and convener. He does not merely oversee the debate; he sets its boundaries. His political power includes the capacity to Veto any resolution he deems harmful to Macedonian interests. Critically, Philip exercises direct authority by introducing all sudden political shifts or unexpected military developments—termed Crisis Updates—as Royal Decrees or urgent intelligence.
+
+The timing and nature of these crises are not arbitrary; they function as coercive tools. By introducing profound challenges, such as the Spartan defiance, as matters of immediate military necessity, Philip strategically forces the Congress to prioritize rapid decision-making focused on security and expediency, rather than prolonged ideological debates concerning the sovereignty of member states. This constant pressure ensures that delegates consolidate power rapidly under Macedonian leadership, thereby accelerating the ratification of the Charter and strengthening the Operative Clauses related to internal security and military command.
+
+<strong>Parmenion (The Military Arm)</strong>
+
+Parmenion, Philip’s most trusted general, represents the direct military power underpinning the Macedonian <strong>Hegemony</strong>. His role is to ensure efficiency and precision, representing the threat of military coercion should diplomacy fail. In debates concerning military contributions, internal security, and command structure, Parmenion’s presence and influence carry the undeniable weight of the Macedonian Phalanx—the infantry formation that secured Philip’s victories. Any opposition to military clauses must consider the possibility of his involvement.
+
+<strong>Olympias of Epirus (The Diplomatic Governor)</strong>
+
+Olympias is the third pillar, known for her political acumen and commitment to Macedonian unity. Serving as the constitutional expert, she oversees the technical drafting of the Charter and manages the technical reception of Draft Resolutions and amendments. Her essential function is diplomatic intelligence gathering. Olympias monitors the negotiations and observes the movements of various delegate Blocs, reporting alignment and dissent back to the Macedonian principals. She is the channel through which Philip receives strategic intelligence concerning the internal workings and political vulnerabilities of the Greek states.
+</pre>
+        </div>
+      </details>
+
+      <details id="sec3" class="anchor">
+        <summary><span class="chev">▸</span>3. The Hellenic League Charter: Articles of Contention</summary>
+        <div class="content">
+<pre>
+The principal mandate of the Congress is the drafting, debate, and ratification of the League’s founding Charter. Every clause, both Preambulatory (providing context) and Operative (mandating action), must be scrutinized for its long-term political impact.
+
+<strong>A. Defining the New Polity: Sovereignty vs. Federation</strong>
+
+The Congress must grapple with the fundamental constitutional question of defining the relationship between the members and the central authority. The core debate is whether the League functions as a loose military alliance, or a centralized body under Macedonian <strong>Suzerainty</strong>.
+
+States like <strong>Athens</strong> (Phocion) and the Aetolian League (Chares) will fight fiercely to define the League as a Federation of Federated States, pushing to retain maximum <strong>Autonomy</strong> and political Sovereignty. Their aim is to ensure that local laws and the authority of their Magistrates are not superseded by League authority or Macedonian Decrees. Conversely, Macedonian loyalists seek a robust, centralized model that grants Philip the unhindered authority of a Monarch to enforce the <strong>Common Peace</strong>. The resolutions drafted must explicitly define how the fundamental political unit of Hellenic civilization, the Polis, retains its identity and partial Sovereignty while submitting to the League’s overall purpose.
+
+<strong>B. The Military Contributions and Command Structure (The Persian Mandate)</strong>
+
+Since the League’s primary declared purpose is the war against Persia, the military articles are heavily weighted toward Macedonian interests.
+
+The Charter must outline specific troop commitments, including Hoplite forces and essential naval assets, for the Persian campaign. Delegates will naturally attempt to minimize their state's financial and human contributions while attempting to maximize the commitments demanded of their regional rivals. Furthermore, the League must secure vital geopolitical points for the success of the campaign:
+
+The <strong>Hellespont</strong>: Controlled by <strong>Byzantium</strong> (Leo), this narrow strait (the modern Dardanelles) is absolutely vital for the supply of grain from the Black Sea and must be secured against Persian fleets. <strong>Byzantium</strong>'s compliance is non-negotiable for Philip.
+
+The <strong>Diolkos</strong>: The ancient paved trackway across the Isthmus of <strong>Corinth</strong> is crucial for rapid military movement and commerce in the Peloponnese. <strong>Corinth</strong> (Deinarchus), as the host city, holds significant influence over its protection.
+
+The ultimate point of contention lies in the Command Structure. Delegates must determine whether the League army will operate under a joint council comprised of Greek Legates and Magistrates, or whether Philip II, through Royal Decree, will retain absolute command. The latter option is a direct political expression of Macedonian <strong>Hegemony</strong>.
+
+<strong>C. Internal Security and Judicial Mechanisms</strong>
+
+A central requirement of the <strong>Common Peace</strong> is the establishment of mechanisms to prevent future conflicts and enforce order. The Charter must establish a system to enforce peace and prevent the recurrence of debilitating conflicts like the Sacred War.
+
+However, the political reality dictates that internal security clauses will be leveraged by regional powers to settle old scores. Delegates such as Argos (Perilaus) and the Arcadian League (Cercidas) will aggressively push for strong internal security Operative Clauses to be used as political and military weapons, specifically targeting unaligned Peloponnesian states and, most notably, <strong>Sparta</strong>. The goal of these loyalists is to define a judicial mechanism that allows the League’s authority to legally isolate, sanction, or militarily coerce regional rivals, thereby securing their own dominance under the umbrella of Macedonian power.
+
+The strategic points of conflict within the Charter highlight the precarious balancing act required of delegates:
+
+</pre><h3>Table 1: Strategic Points of Conflict in the Hellenic Charter</h3>
+<table class="data">
+  <thead>
+    <tr>
+      <th>Charter Article</th>
+      <th>Primary Conflict</th>
+      <th>Key Delegates with Vested Interests</th>
+      <th>Potential Outcomes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Definition of Autonomy</strong></td>
+      <td><strong>Macedonian Hegemony</strong> vs. <strong>Polis Sovereignty</strong></td>
+      <td><strong>Athens</strong> (Phocion), <strong>Aetolia</strong> (Chares), <strong>Thessaly</strong> (Daochos), <strong>Megara</strong> (Stilpo)</td>
+      <td>Limited <strong>Autonomy</strong> secured under Macedonian oversight / Full integration into a <strong>Federated State</strong> model.</td>
+    </tr>
+    <tr>
+      <td><strong>Military Contributions</strong></td>
+      <td>Naval vs. Land obligations &amp; <strong>Command structure</strong></td>
+      <td><strong>Athens</strong>, <strong>Argos</strong>, <strong>Corinth</strong>, <strong>Rhodes</strong>, <strong>Crete</strong>, <strong>Byzantium</strong> (Leo)</td>
+      <td>Unequal burden distribution / Clause granting <strong>Philip II</strong> ultimate <strong>Veto</strong> power over deployments.</td>
+    </tr>
+    <tr>
+      <td><strong>Internal Dispute Resolution</strong></td>
+      <td>Jurisdiction of <strong>League</strong> vs. Local <strong>Magistrates</strong></td>
+      <td><strong>Achaean League</strong> (Aratus), <strong>Argos</strong> (Perilaus), <strong>Elis</strong> (Phaeax)</td>
+      <td>Judicial mechanism used as a political tool to target rivals and settle old grudges (e.g., <strong>Argos</strong> vs. <strong>Sparta</strong>).</td>
+    </tr>
+  </tbody>
+</table>
+<pre>
+
+A deeper examination of the naval clauses reveals a crucial leverage point for certain states. While Philip commands the powerful Macedonian land forces, he critically relies on the maritime states—<strong>Athens</strong>, Corcyra, and Rhodes—to supply the naval superiority required for the Persian campaign. These states possess valuable political currency. <strong>Athens</strong> (Phocion), in particular, will seek to trade substantive naval commitments for explicit assurances regarding the preservation of its <strong>Autonomy</strong>. Furthermore, <strong>Byzantium</strong>’s control over the <strong>Hellespont</strong> grants Leo immense influence over the supply lines and the entire viability of the Persian campaign.
+
+Consequently, these maritime states will likely form a Bloc to push for Preambulatory Clauses that strongly emphasize the League's role in trade protection and Operative Clauses mandating that naval contributions remain under the command of League-appointed admirals, thus attempting to limit the unchecked authority of Macedonian generals like Parmenion over their valuable fleets.
+</pre>
+        </div>
+      </details>
+
+      <details id="sec4" class="anchor">
+        <summary><span class="chev">▸</span>4. Gallery of Delegates: Alliances and Vested Interests</summary>
+        <div class="content">
+<p><strong>The success of the Congress</strong> hinges on intricate diplomacy and the formation of temporary Blocs. Delegates must analyze the core motivations of their 19 peers, recognizing that alliances are fluid, driven purely by self-interest, survival, and the negotiation of acceptable <strong>Suzerainty</strong>.</p>
+
+<h3><strong>A. The Great Powers &amp; Macedonian Anchors</strong></h3>
+<table class="data">
+  <thead>
+    <tr><th>Polis / League</th><th>Representative</th><th>Primary Goal</th><th>Leverage / Vulnerability</th><th>Key Alliance/Rival</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Athens</strong></td><td><strong>Phocion</strong></td><td>Preserve naval dignity and limited democracy/<strong>Autonomy</strong>.</td><td>Large naval fleet, historical prestige. Vulnerable to Macedonian grain supply control.</td><td>Rival of <strong>Thebes</strong>/<strong>Corinth</strong>; wary of <strong>Philip</strong>.</td></tr>
+    <tr><td><strong>Thebes</strong></td><td><strong>Astyphilus</strong></td><td>Survival and city rebuilding post-<strong>Chaeronea</strong>.</td><td>Close proximity to Macedon; full cooperation with <strong>Philip</strong>. Walks a "fine line" between capitulation and honor.</td><td>Pro-Macedon; wary of <strong>Athens</strong>.</td></tr>
+    <tr><td><strong>Corinth</strong></td><td><strong>Deinarchus</strong></td><td>Economic benefits: protecting trade and the <strong>Diolkos</strong>.</td><td>Host city of the Congress; wealthy commercial power. Controls the vital land bridge.</td><td>Pragmatist; focused on commerce.</td></tr>
+    <tr><td><strong>Argos</strong></td><td><strong>Perilaus</strong></td><td>Permanent diminution of <strong>Sparta</strong> and Peloponnesian dominance.</td><td>Firm supporter of <strong>Philip</strong>; long-standing rival of <strong>Sparta</strong>.</td><td>Firmly Pro-Macedon; primary rival: <strong>Sparta</strong>.</td></tr>
+    <tr><td><strong>Thessalian League</strong></td><td><strong>Daochos of Pharsalus</strong></td><td>Advocate for unity under <strong>Philip’s Hegemon</strong>; deeply integrated.</td><td>Key regional ally; military contributions already committed to <strong>Philip</strong>.</td><td>Strongest voice for <strong>Philip</strong>'s agenda.</td></tr>
+  </tbody>
+</table>
+
+<h3><strong>B. The Peloponnesian Bloc and Regional Security</strong></h3>
+<table class="data">
+  <thead>
+    <tr><th>Polis / League</th><th>Representative</th><th>Primary Goal</th><th>Leverage / Vulnerability</th><th>Key Alliance/Rival</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Achaean League</strong></td><td><strong>Aratus of Sicyon</strong></td><td>Rights of smaller states; strong League council to protect members from great powers.</td><td>Unity of several small states; internal political cohesion.</td><td>Seeks checks on <strong>Argos</strong> and Macedon.</td></tr>
+    <tr><td><strong>Arcadian League</strong></td><td><strong>Cercidas of Megalopolis</strong></td><td>Containment of <strong>Sparta</strong> (Megalopolis was founded to check <strong>Sparta</strong>).</td><td>Natural ally of <strong>Argos</strong> and <strong>Philip</strong>; keen on anti-Spartan resolutions.</td><td>Pro-Macedon; primary rival: <strong>Sparta</strong>.</td></tr>
+    <tr><td><strong>Elis</strong></td><td><strong>Phaeax</strong></td><td>End wars; protect the neutrality of the Olympic Games and promote the "<strong>Common Peace</strong>".</td><td>Cultural and religious influence (Olympia).</td><td>Strong proponent of peace/stability.</td></tr>
+    <tr><td><strong>Epidaurus</strong></td><td><strong>Asclepiades</strong></td><td>Inviolability of sacred sites; guarantee access to the Sanctuary of Asclepius.</td><td>Religious and cultural influence; needs peace for pilgrims.</td><td>Supports stability and peace clauses.</td></tr>
+  </tbody>
+</table>
+
+<h3><strong>C. Central, Western, and Traumatized States</strong></h3>
+<table class="data">
+  <thead>
+    <tr><th>Polis / League</th><th>Representative</th><th>Primary Goal</th><th>Leverage / Vulnerability</th><th>Key Alliance/Rival</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Aetolian League</strong></td><td><strong>Chares</strong></td><td>Fierce independence and maximum local <strong>Autonomy</strong>.</td><td>Rugged, militaristic people; difficult to coerce militarily. Highly skeptical of <strong>Philip</strong>.</td><td>Loud voice for self-governance; potential opposition leader.</td></tr>
+    <tr><td><strong>Acarnanian League</strong></td><td><strong>Anaximenes</strong></td><td>Security guarantee against powerful neighbors, especially <strong>Aetolia</strong>.</td><td>Regional stability is paramount; views Macedon as a necessary protector.</td><td>Likely supports Macedonian oversight.</td></tr>
+    <tr><td><strong>Phocis</strong></td><td><strong>Onomarchus the Younger</strong></td><td>Protection and assistance for rebuilding after the <strong>Sacred War</strong>.</td><td>Weak position; reliant on the <strong>Hegemon</strong> for survival.</td><td>Supports <strong>Philip</strong> in exchange for aid and stability.</td></tr>
+    <tr><td><strong>Megara</strong></td><td><strong>Stilpo (The Philosopher)</strong></td><td>Pragmatic logic and preservation of rights; navigation between major spheres.</td><td>Intellectual argument; influential position between <strong>Athens</strong> and <strong>Corinth</strong>.</td><td>Cautious, intellectual approach to debate.</td></tr>
+    <tr><td><strong>Locris</strong></td><td><strong>Euthymus of Opus</strong></td><td>Regional stability and protection from Aetolians/Phocians; compensation for <strong>Sacred War</strong> losses.</td><td>Geographically vulnerable; desperate for security guarantees.</td><td>Cautious supporter of Macedonian peace.</td></tr>
+  </tbody>
+</table>
+
+<h3><strong>D. The Maritime and Strategic Commercial States</strong></h3>
+<table class="data">
+  <thead>
+    <tr><th>Polis / League</th><th>Representative</th><th>Primary Goal</th><th>Leverage / Vulnerability</th><th>Key Alliance/Rival</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Euboea</strong></td><td><strong>Callias of Chalcis</strong></td><td>Unified league to protect islands from piracy and Persia.</td><td>Pragmatist; suffered consequences of defying Macedon.</td><td>Supports unified action, highly pragmatic.</td></tr>
+    <tr><td><strong>Corcyra</strong></td><td><strong>Prytanis</strong></td><td>Maritime law, trade protection, and limiting naval monopoly (<strong>Athens</strong>/Macedon).</td><td>Strategic location on route to Italy; strong naval focus.</td><td>Focused heavily on trade security clauses.</td></tr>
+    <tr><td><strong>Byzantium</strong></td><td><strong>Leo</strong></td><td>Security of the <strong>Hellespont</strong> and grain supply.</td><td>Controls vital economic chokepoint; high leverage against <strong>Philip</strong>.</td><td>Highly pragmatic; anti-Persian but wary of overreaching Macedon.</td></tr>
+    <tr><td><strong>Rhodes</strong></td><td><strong>Mentor (Archetype)</strong></td><td>Naval power, independence, and protection of commercial networks.</td><td>Powerful maritime state; sought-after naval partner.</td><td>Wary of naval subordination; supports strong naval component.</td></tr>
+    <tr><td><strong>Crete (General)</strong></td><td><strong>Nearchus</strong></td><td>Economic benefits from mercenary service and trade routes.</td><td>Provider of skilled mercenary soldiers to all sides.</td><td>Opportunistic; supports stability that facilitates mercenary employment.</td></tr>
+    <tr><td><strong>Perinthus / Thracian Chersonese</strong></td><td><strong>Diopithes</strong></td><td>Security of grain supply and autonomy from Macedon in the straits region.</td><td>Control over access to the Black Sea; historically anti-Macedonian.</td><td>Cautious <strong>Philip</strong> supporter; pushes for free passage clauses.</td></tr>
+  </tbody>
+</table>
+
+<p>The Charter debate is heavily influenced by the interplay between delegates seeking internal security and those seeking to limit Macedonian encroachment. The analysis reveals two crucial <strong>Bloc</strong> dynamics.</p>
+<p><strong>First</strong>, the Vulnerable Pro-Macedonian Bloc consists of states like <strong>Thebes</strong> (Astyphilus), <strong>Phocis</strong> (Onomarchus), and the <strong>Acarnanian League</strong> (Anaximenes). These states are fundamentally weak due to recent military defeat or ongoing threats from powerful neighbors (like <strong>Aetolia</strong>). They are the easiest votes for <strong>Philip</strong> to secure, as they willingly exchange elements of <strong>Sovereignty</strong> for immediate military security and financial assistance, particularly for rebuilding after conflicts like the <strong>Sacred War</strong>. These delegates are the primary proponents of strong Preambulatory Clauses citing the devastation of previous Greek conflicts as justification for unity and a powerful central authority, providing the necessary ideological counterweight to the autonomy arguments raised by states like <strong>Aetolia</strong> and <strong>Athens</strong>.</p>
+<p><strong>Second</strong>, the Pragmatists' Coalition (<strong>Athens</strong>, <strong>Corinth</strong>, <strong>Byzantium</strong>) represents a commercially driven Bloc. Despite Athens’ ideological resistance to Macedonian <strong>Hegemony</strong>, <strong>Phocion</strong>, <strong>Deinarchus</strong>, and <strong>Leo</strong> share a common economic interest: protecting naval assets and critical trade routes. These states will support the Persian War because Persia threatens their commercial hegemony in the Aegean. However, they will unify to oppose any Operative Clause that grants <strong>Philip</strong> unchecked authority over the League navy, prioritizing naval <strong>Autonomy</strong> and economic stability over outright submission, seeking to restrain Philip's ability to arbitrarily use their resources outside of the agreed-upon Persian campaign framework.</p>
+        </div>
+      </details>
+
+      <details id="sec5" class="anchor">
+        <summary><span class="chev">▸</span>5. Conclusions and Strategic Recommendations</summary>
+        <div class="content">
+<pre>
+The Congress of <strong>Corinth</strong> is a profound exercise in realpolitik and constrained negotiation. The delegates face two non-negotiable imperatives: the drafting of the Charter and the containment of <strong>Sparta</strong>. These two tasks are deeply interwoven. Any solution proposed for the Spartan crisis must be subsequently integrated into the Charter, affecting clauses related to internal security, military contributions, and the definition of <strong>Autonomy</strong>.
+
+Delegates are advised to formulate their positions around two core strategic objectives:
+
+<strong>Negotiating <strong>Autonomy</strong> under <strong>Hegemony</strong></strong>: The goal is not to defeat Philip, but to limit the reach of his <strong>Suzerainty</strong>. Delegates from states with specific military or economic assets (e.g., naval powers, controllers of chokepoints like <strong>Byzantium</strong> and <strong>Corinth</strong>) should leverage these necessities to secure explicit Operative Clauses that protect their local Magistrates and domestic governance from interference by League-mandated Decrees.
+
+<strong>Defining the Response to <strong>Sparta</strong></strong>: The resolution to the Spartan crisis will establish a precedent for the League's internal conduct. Delegates must decide whether the new entity prioritizes the image of Panhellenic unity (suggesting diplomacy and conciliation) or the immediate assertion of centralized military power (suggesting sanctions or an ultimatum). Supporting immediate military action pleases Philip’s generals and staunch loyalists, but risks cementing the League’s reputation as a tool of Macedonian tyranny, potentially inciting future rebellions.
+
+Effective preparation requires not only understanding one's own goals but also anticipating the moves of the Peloponnesian loyalist Bloc (Argos, Arcadian League) who seek to utilize the League’s authority to execute a geopolitical agenda against <strong>Sparta</strong>. The most successful delegates will draft resolutions that satisfy Philip’s immediate need for unity against Persia while subtly embedding constitutional protections for their long-term political interests.
+</pre>
+        </div>
+      </details>
+
+      <details id="appA" class="anchor">
+        <summary><span class="chev">▸</span>Appendix A: Essential Terminology and Rhetoric</summary>
+        <div class="content">
+<table class="data">
+  <thead>
+    <tr><th>Term</th><th>Part of Speech</th><th>Definition</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Adjourn</td><td>verb</td><td>To suspend proceedings to another time or indefinitely.</td></tr>
+    <tr><td><strong>Autonomy</strong></td><td>noun</td><td>Self-governance; freedom from external control.</td></tr>
+    <tr><td>Bloc</td><td>noun</td><td>A group of delegates who coordinate their positions and votes.</td></tr>
+    <tr><td>Caucus</td><td>noun</td><td>A meeting of delegates to discuss strategy or draft proposals.</td></tr>
+    <tr><td>Charter</td><td>noun</td><td>A formal document outlining rights, aims, or organization.</td></tr>
+    <tr><td>Crisis Update</td><td>noun</td><td>A "breaking news" bulletin issued by the dais to reflect evolving events in the scenario.</td></tr>
+    <tr><td>Covenant</td><td>noun</td><td>A solemn agreement or pledge between parties.</td></tr>
+    <tr><td>Decree</td><td>noun</td><td>An official order issued by an authority.</td></tr>
+    <tr><td>Delegate</td><td>noun</td><td>An official representative of a state or organization.</td></tr>
+    <tr><td><strong>Diolkos</strong></td><td>noun</td><td>Ancient paved trackway across the Isthmus of <strong>Corinth</strong> used to transport ships over land.</td></tr>
+    <tr><td>Draft Resolution</td><td>noun</td><td>A formal document containing preambulatory and operative clauses, submitted for debate and amendment.</td></tr>
+    <tr><td>Edict</td><td>noun</td><td>An official proclamation or order.</td></tr>
+    <tr><td>Ephor</td><td>noun</td><td>One of five annually elected Spartan magistrates who shared power with the kings.</td></tr>
+    <tr><td>Ephorate</td><td>noun</td><td>The office or term of service of the Spartan Ephors.</td></tr>
+    <tr><td>Federation</td><td>noun</td><td>A union of states or groups under a central government.</td></tr>
+    <tr><td>Federated State</td><td>noun</td><td>A member state within a federation retaining partial sovereignty.</td></tr>
+    <tr><td><strong>Hegemony</strong></td><td>noun</td><td>Leadership or dominance, especially by one state over others.</td></tr>
+    <tr><td><strong>Hellespont</strong></td><td>noun</td><td>The narrow strait (modern Dardanelles) between Europe and Asia, vital for grain routes.</td></tr>
+    <tr><td>Hoplite</td><td>noun</td><td>Heavily armed foot soldier in ancient Greece, wielding spear and shield.</td></tr>
+    <tr><td>Legate</td><td>noun</td><td>An official envoy or deputy sent on diplomatic missions.</td></tr>
+    <tr><td>Magistrate</td><td>noun</td><td>An official entrusted with administration of laws.</td></tr>
+    <tr><td>Moderated Caucus</td><td>noun</td><td>A limited-time debate format where the chair recognizes speakers in turn on a set topic.</td></tr>
+    <tr><td>Monarch</td><td>noun</td><td>A sovereign head of state, especially a king or queen.</td></tr>
+    <tr><td>Motion to Table</td><td>noun</td><td>A proposal to set aside the current topic or resolution for later discussion.</td></tr>
+    <tr><td>Operative Clause</td><td>noun</td><td>A provision in a resolution that specifies actionable measures or directives.</td></tr>
+    <tr><td>Panhellenic</td><td>adj.</td><td>Involving all Greek city-states.</td></tr>
+    <tr><td>Preambulatory Clause</td><td>noun</td><td>A provision in a resolution that provides context or motivation but contains no direct actions.</td></tr>
+    <tr><td>Phalanx</td><td>noun</td><td>A tight infantry formation of hoplites, shields overlapping in a wall of spears.</td></tr>
+    <tr><td>Peloponnese</td><td>noun</td><td>The large southern peninsula of mainland Greece.</td></tr>
+    <tr><td>Point of Information</td><td>noun</td><td>A brief request for clarification addressed to a speaker during formal debate.</td></tr>
+    <tr><td>Point of Order</td><td>noun</td><td>A procedural intervention calling attention to a rules violation.</td></tr>
+    <tr><td>Polis</td><td>noun</td><td>A city-state in ancient Greece, the basic political unit of Hellenic civilization.</td></tr>
+    <tr><td>Ratify</td><td>verb</td><td>To formally approve and confirm (a proposal, treaty, or document).</td></tr>
+    <tr><td>Royal Decree</td><td>noun</td><td>A formal order issued by the monarch that functions as an unamendable crisis input.</td></tr>
+    <tr><td>Sacred War</td><td>noun</td><td>The Third Sacred War (356–346 BCE) over control of Delphi’s sanctuary.</td></tr>
+    <tr><td>Sovereignty</td><td>noun</td><td>Supreme authority over a territory; independence from external rule.</td></tr>
+    <tr><td><strong>Sparta</strong></td><td>noun</td><td>A prominent Greek city-state known for its military tradition; also called Lacedaemon.</td></tr>
+    <tr><td><strong>Suzerainty</strong></td><td>noun</td><td>The relationship of a powerful state controlling the foreign affairs of a tributary but allowing domestic autonomy.</td></tr>
+    <tr><td>Tyrant</td><td>noun</td><td>In Greek usage, a ruler who seized power unconstitutionally (not necessarily cruel).</td></tr>
+    <tr><td>Veto</td><td>noun / verb</td><td>(n.) The power to forbid or reject a decision; (v.) to exercise that power.</td></tr>
+    <tr><td>Vanguard</td><td>noun</td><td>The foremost part of an advancing army or movement.</td></tr>
+    <tr><td>Working Paper</td><td>noun</td><td>An informal, unformatted document used to develop ideas before submission as a draft resolution.</td></tr>
+  </tbody>
+</table>
+        </div>
+      </details>
+
+      <details id="appB" class="anchor">
+        <summary><span class="chev">▸</span>Appendix B: Pronunciation Guide</summary>
+        <div class="content">
+<table class="data">
+  <thead>
+    <tr><th>Name / Place</th><th>Pronunciation (IPA)</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Agis</td><td>/ˈeɪdʒɪs/</td></tr>
+    <tr><td>Antipater</td><td>/ænˈtɪpətər/</td></tr>
+    <tr><td>Aratus</td><td>/ˈærətəs/</td></tr>
+    <tr><td>Cercidas</td><td>/ˈsɛrkɪdəs/</td></tr>
+    <tr><td><strong>Corinth</strong></td><td>/ˈkɒrɪnθ/</td></tr>
+    <tr><td>Daochos</td><td>/ˈdeɪəkoʊs/</td></tr>
+    <tr><td>Delphi</td><td>/ˈdɛlfaɪ/</td></tr>
+    <tr><td><strong>Hellespont</strong></td><td>/ˈhɛlɪspɒnt/</td></tr>
+    <tr><td>Lacedaemon</td><td>/ˌlæsɪˈdiːmən/</td></tr>
+    <tr><td>Leonidas</td><td>/liːˈɒnɪdəs/</td></tr>
+    <tr><td>Olympia</td><td>/əˈlɪmpiə/</td></tr>
+    <tr><td>Olympias</td><td>/əˈlɪmpiəs/</td></tr>
+    <tr><td>Onomarchus</td><td>/ˌɒnəˈmɑːrkəs/</td></tr>
+    <tr><td>Pammenes</td><td>/ˈpæməniz/</td></tr>
+    <tr><td>Parmenion</td><td>/pär-mə-ˈnē-än/</td></tr>
+    <tr><td>Phaeax</td><td>/ˈfeəks/</td></tr>
+    <tr><td>Phocion</td><td>/ˈfoʊʃən/</td></tr>
+    <tr><td>Philip</td><td>/ˈfɪlɪp/</td></tr>
+    <tr><td><strong>Sparta</strong></td><td>/ˈspɑːrtə/</td></tr>
+    <tr><td>Stilpo</td><td>/ˈstɪlpoʊ/</td></tr>
+    <tr><td>Temples</td><td>/ˈtɛmpəlz/</td></tr>
+    <tr><td>Timoleon</td><td>/tɪˈmoʊliɒn/</td></tr>
+    <tr><td>Thessalia</td><td>/θəˈseɪliə/</td>
+    <tr><td>Peloponnese</td><td>/ˌpɛləpəˈniːs/</td>
+  </tbody>
+</table>
+        </div>
+      </details>
+
+      <details id="sources" class="anchor">
+        <summary><span class="chev">▸</span>Primary Sources and Scholarship</summary>
+        <div class="content">
+<div class="sources">
+  <h3>Primary Sources</h3>
+  <ul>
+    <li><a target="_blank" rel="noopener" href="https://topostext.org/work/418">Demosthenes, <em>On the Crown</em> (ToposText)</a></li>
+    <li><a target="_blank" rel="noopener" href="http://www.gutenberg.org/ebooks/9060">Demosthenes — Gutenberg edition</a></li>
+    <li><a target="_blank" rel="noopener" href="http://www.thelatinlibrary.com/imperialism/readings/isocrates.html">Isocrates, <em>To Philip</em> (The Latin Library)</a></li>
+    <li><a target="_blank" rel="noopener" href="https://www.loebclassics.com/view/isocrates-letters_3_philip_ii/1945/pb_LCL373.405.xml">Isocrates — Loeb Classical Library</a></li>
+    <li><a target="_blank" rel="noopener" href="https://topostext.org/work/134">Diodorus Siculus, <em>Historical Library</em> (ToposText)</a></li>
+    <li><a target="_blank" rel="noopener" href="https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Diodorus_Siculus/17C*.html">Diodorus — LacusCurtius</a></li>
+    <li><a target="_blank" rel="noopener" href="https://classics.domains.skidmore.edu/lit-campus-only/primary/translations/Plutarch%20Alex.pdf">Plutarch, <em>Life of Alexander</em> (PDF)</a></li>
+  </ul>
+  <h3>Scholarly Articles and Historical Context</h3>
+  <ul>
+    <li><a target="_blank" rel="noopener" href="https://www.britannica.com/biography/Philip-II-king-of-Macedonia">Britannica: Philip II</a></li>
+    <li><a target="_blank" rel="noopener" href="https://www.worldhistory.org/timeline/Philip_II_of_Macedon/">World History Encyclopedia: Philip II timeline</a></li>
+    <li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Macedonia_(ancient_kingdom">Wikipedia: Macedonia (ancient kingdom)</a></li>
+    <li><a target="_blank" rel="noopener" href="https://oxfordre.com/classics/display/10.1093/acrefore/9780199381135.001.0001/acrefore-9780199381135-e-1820">Oxford Research Encyclopedias: The League of <strong>Corinth</strong></a></li>
+    <li><a target="_blank" rel="noopener" href="https://www.cambridge.org/core/books/federalism-in-greek-antiquity/hellenic-leagues-of-late-classical-and-hellenistic-times-and-their-place-in-the-history-of-greek-federalism/38D72AA801AC93CBDB1FDC5E1BB25957">Cambridge: Federalism in Greek Antiquity</a></li>
+    <li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Achaean_League">Wikipedia: Achaean League</a></li>
+    <li><a target="_blank" rel="noopener" href="https://www.livius.org/articles/person/agis-iii/">Livius: King Agis III</a></li>
+    <li><a target="_blank" rel="noopener" href="https://ourarchive.otago.ac.nz/esploro/outputs/graduate/Agis-III-Revelations-and-Relegations--/9926480278401891">University of Otago: Agis III</a></li>
+    <li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Battle_of_Megalopolis">Wikipedia: Battle of Megalopolis</a></li>
+  </ul>
+</div>
+        </div>
+      </details>
+
+    </div>
+  </main>
+
+  <script>
+    const expandAllBtn = document.getElementById('expandAll');
+    const collapseAllBtn = document.getElementById('collapseAll');
+    const printBtn = document.getElementById('printPage');
+
+    expandAllBtn.addEventListener('click', () => {
+      document.querySelectorAll('details').forEach(d => d.open = true);
+    });
+    // This script ensures all sections, including the first one, are collapsed on click, 
+    // but the collapseAll button has slightly altered behavior for the first element.
+    collapseAllBtn.addEventListener('click', () => {
+      document.querySelectorAll('details').forEach(d => d.open = false);
+      // Removed the code that kept the first element open
+    });
+    printBtn.addEventListener('click', () => window.print());
+  </script>
+</body>
+</html>
