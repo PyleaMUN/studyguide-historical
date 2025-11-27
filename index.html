@@ -11,6 +11,8 @@
       --ink: #333;
       --brand: #005b63;
       --accent: #00b4a0;
+      --alert: #d32f2f;
+      --alert-bg: #ffcdd2;
     }
     html, body { margin:0; padding:0; background:var(--bg); color:var(--ink); font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
     .letterhead { display:flex; justify-content:space-between; align-items:center; background-color:#D6DBD2; border-bottom:2px solid #444; padding:10px 20px; min-height:100px; flex-wrap:wrap; }
@@ -43,6 +45,20 @@
     .content { padding: 0 1rem 1rem; }
     .content pre { white-space: pre-wrap; word-wrap: break-word; margin:0; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:.98rem; line-height:1.5; }
 
+    /* Special Procedural Box */
+    .procedural-box {
+      border: 2px solid var(--brand);
+      background-color: #f1f8e9;
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+    .procedural-box h3 {
+      margin-top: 0;
+      color: var(--brand);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
     /* Nice anchors */
     .anchor { scroll-margin-top: 110px; }
 
@@ -54,7 +70,7 @@
       .content { padding:0; }
     }
     /* Overrides per user request */
-    body, html, .content pre { font-family: Georgia, 'Times New Roman', Times, serif !important; }
+    body, html, .content pre, .procedural-box { font-family: Georgia, 'Times New Roman', Times, serif !important; }
     table.data { width:100%; border-collapse:collapse; background:#fff; border:1px solid #cfe8ea; border-radius:12px; overflow:hidden; }
     table.data th, table.data td { border:1px solid #cfe8ea; padding:.55rem .7rem; vertical-align:top; }
     table.data th { background:#f0fbfd; color:#00796b; text-align:left; }
@@ -90,7 +106,7 @@
 
       <nav class="toc">
         <h2>Quick Navigation</h2>
-        <a href="#sec1">1. Executive Summary</a>
+        <a href="#sec1">1. Executive Summary & Procedure</a>
         <a href="#sec2">2. Historical Foundation & Power</a>
         <a href="#sec3">3. League Charter</a>
         <a href="#sec4">4. Gallery of Delegates</a>
@@ -114,6 +130,17 @@ The Congress is formally convened by Philip II of Macedon with dual, stated obje
 
 Delegates must approach the proceedings recognizing that the stated goal of unity functions primarily to mask the underlying reality of Macedonian control. The Hellenic League, despite its name, is fundamentally designed as an instrument of Philip's <strong>Hegemony</strong>, which is defined as the leadership or dominance of one state over others. The assembled Greek states are thus negotiating the terms of their collective <strong>Suzerainty</strong>—a relationship wherein a powerful state controls their foreign affairs while theoretically allowing for domestic <strong>Autonomy</strong>. The primary challenge for every delegate is to preserve the maximum possible degree of local self-governance while accepting the undeniable necessity of Philip’s military leadership and protection for the impending Persian campaign. The success of the League will be measured not in the equality of its members, but in the political ingenuity of the delegates to limit the reach of Macedonian authority within the framework of collective security.
 </pre>
+        
+        <div class="procedural-box">
+          <h3>⚠️ IMPORTANT PROCEDURAL NOTE: The Hybrid Format</h3>
+          <p>Please note that the PyleaMUN Historical Crisis Committee operates as a <strong>Hybrid Specialized Agency</strong>. Delegates must master two distinct forms of action:</p>
+          <ol>
+            <li><strong>The Legislative Track (The Charter):</strong> Our primary goal is the ratification of the <strong>League Charter</strong>. For this document <em>only</em>, we will use standard <strong>Draft Resolution</strong> formatting (Preambulatory & Operative Clauses).</li>
+            <li><strong>The Crisis Track (Directives):</strong> For immediate responses to "Crisis Updates" (e.g., sudden military threats or the Spartan Defiance), the committee will utilize <strong>Directives</strong>. These are short, action-oriented orders with <em>no</em> preambulatory clauses, designed for rapid execution.</li>
+            <li><strong>Portfolio Powers:</strong> While the Charter is public, delegates may send <strong>Private Notes</strong> to the Dais to utilize their specific historical leverage (e.g., "Athens deploys the 5th Fleet") to influence events behind the scenes.</li>
+          </ol>
+        </div>
+
         </div>
       </details>
 
@@ -137,7 +164,7 @@ While the proceedings may follow a diplomatic format, the ultimate levers of pow
 
 Philip II is the ultimate authority in the Congress, holding the position of Monarch and convener. He does not merely oversee the debate; he sets its boundaries. His political power includes the capacity to Veto any resolution he deems harmful to Macedonian interests. Critically, Philip exercises direct authority by introducing all sudden political shifts or unexpected military developments—termed Crisis Updates—as Royal Decrees or urgent intelligence.
 
-The timing and nature of these crises are not arbitrary; they function as coercive tools. By introducing profound challenges, such as the Spartan defiance, as matters of immediate military necessity, Philip strategically forces the Congress to prioritize rapid decision-making focused on security and expediency, rather than prolonged ideological debates concerning the sovereignty of member states. This constant pressure ensures that delegates consolidate power rapidly under Macedonian leadership, thereby accelerating the ratification of the Charter and strengthening the Operative Clauses related to internal security and military command.
+The timing and nature of these crises are not arbitrary; they function as coercive tools. By introducing profound challenges, such as the Spartan defiance, as matters of immediate military necessity, Philip strategically forces the Congress to prioritize rapid decision-making. Delegates must be prepared to pause the Charter debate to issue immediate <strong>Directives</strong> focused on security and expediency. This constant pressure ensures that delegates consolidate power rapidly under Macedonian leadership.
 
 <strong>Parmenion (The Military Arm)</strong>
 
@@ -319,12 +346,13 @@ Effective preparation requires not only understanding one's own goals but also a
     <tr><td>Bloc</td><td>noun</td><td>A group of delegates who coordinate their positions and votes.</td></tr>
     <tr><td>Caucus</td><td>noun</td><td>A meeting of delegates to discuss strategy or draft proposals.</td></tr>
     <tr><td>Charter</td><td>noun</td><td>A formal document outlining rights, aims, or organization.</td></tr>
-    <tr><td>Crisis Update</td><td>noun</td><td>A "breaking news" bulletin issued by the dais to reflect evolving events in the scenario.</td></tr>
+    <tr><td>Crisis Update</td><td>noun</td><td>A "breaking news" bulletin issued by the dais. Requires immediate response via Directive.</td></tr>
     <tr><td>Covenant</td><td>noun</td><td>A solemn agreement or pledge between parties.</td></tr>
     <tr><td>Decree</td><td>noun</td><td>An official order issued by an authority.</td></tr>
     <tr><td>Delegate</td><td>noun</td><td>An official representative of a state or organization.</td></tr>
+    <tr><td><strong>Directive</strong></td><td>noun</td><td>A short, direct instruction to the crisis staff to take immediate action without a vote from the full body.</td></tr>
     <tr><td><strong>Diolkos</strong></td><td>noun</td><td>Ancient paved trackway across the Isthmus of <strong>Corinth</strong> used to transport ships over land.</td></tr>
-    <tr><td>Draft Resolution</td><td>noun</td><td>A formal document containing preambulatory and operative clauses, submitted for debate and amendment.</td></tr>
+    <tr><td>Draft Resolution</td><td>noun</td><td>A formal document containing preambulatory and operative clauses, submitted for the Charter debate.</td></tr>
     <tr><td>Edict</td><td>noun</td><td>An official proclamation or order.</td></tr>
     <tr><td>Ephor</td><td>noun</td><td>One of five annually elected Spartan magistrates who shared power with the kings.</td></tr>
     <tr><td>Ephorate</td><td>noun</td><td>The office or term of service of the Spartan Ephors.</td></tr>
@@ -340,7 +368,9 @@ Effective preparation requires not only understanding one's own goals but also a
     <tr><td>Motion to Table</td><td>noun</td><td>A proposal to set aside the current topic or resolution for later discussion.</td></tr>
     <tr><td>Operative Clause</td><td>noun</td><td>A provision in a resolution that specifies actionable measures or directives.</td></tr>
     <tr><td>Panhellenic</td><td>adj.</td><td>Involving all Greek city-states.</td></tr>
+    <tr><td><strong>Portfolio Powers</strong></td><td>noun</td><td>The specific resources (army, navy, wealth, spies) available to a specific delegate to use via private notes.</td></tr>
     <tr><td>Preambulatory Clause</td><td>noun</td><td>A provision in a resolution that provides context or motivation but contains no direct actions.</td></tr>
+    <tr><td><strong>Private Note</strong></td><td>noun</td><td>A secret message sent to the Dais to use Portfolio Powers.</td></tr>
     <tr><td>Phalanx</td><td>noun</td><td>A tight infantry formation of hoplites, shields overlapping in a wall of spears.</td></tr>
     <tr><td>Peloponnese</td><td>noun</td><td>The large southern peninsula of mainland Greece.</td></tr>
     <tr><td>Point of Information</td><td>noun</td><td>A brief request for clarification addressed to a speaker during formal debate.</td></tr>
